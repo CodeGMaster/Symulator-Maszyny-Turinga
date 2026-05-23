@@ -1,0 +1,46 @@
+/* Konfiguracja szerokości pojedynczej komórki dla precyzyjnych obliczeń animacji */
+:root {
+    --cell-width: 4rem; /* 64px */
+}
+
+.tape-cell {
+    width: var(--cell-width);
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-right: 1px solid #374151; /* Tailwind gray-700 */
+    border-left: 1px solid #374151;
+    background-color: #1f2937; /* Tailwind gray-800 */
+    color: #34d399; /* Tailwind emerald-400 */
+}
+
+.tape-anim {
+    /* Płynne przejścia zarządzane przez JS podczas przesuwania taśmy */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Kursor głowicy */
+.head-indicator {
+    box-shadow: 0 0 15px rgba(250, 204, 21, 0.5); /* Żółta poświata */
+    pointer-events: none;
+}
+
+/* Zmiana stylów systemowych suwaka */
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #22d3ee; /* cyan-400 */
+    cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #22d3ee;
+    cursor: pointer;
+}

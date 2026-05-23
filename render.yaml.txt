@@ -1,0 +1,10 @@
+# Blueprint dla Render.com
+services:
+  - type: web
+    name: turing-machine-simulator
+    env: docker
+    region: frankfurt
+    plan: free
+    branch: main
+    # Dockerfile znajduje się w katalogu głównym repozytorium
+    dockerfilePath: ./Dockerfile
